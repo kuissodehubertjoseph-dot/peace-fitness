@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Peace Fitness</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="page-header">
+    <div class="page-header-bg-text">CONTACT</div>
+    <div class="page-header-content">
+      <div class="page-header-eyebrow">On se retrouve</div>
+      <h1>NOUS <span>CONTACTER</span></h1>
+      <p>Une question sur nos programmes, les tarifs ou un essai gratuit ? On vous répond rapidement.</p>
+      <div class="breadcrumb"><a href="index.html">Accueil</a><span class="breadcrumb-sep">›</span><span>Contact</span></div>
+    </div>
+  </div>
+
+  <section id="contact">
+    <div class="contact-layout">
+
+      <!-- Infos -->
+      <div class="contact-infos">
+        <div class="contact-block reveal">
+          <h3 class="contact-block-title">Informations pratiques</h3>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div><div class="ci-label">Adresse</div><div class="ci-val">Atrokpocodji, Cotonou<br>République du Bénin</div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div><div class="ci-label">Téléphone</div><div class="ci-val"><a href="tel:+22900000000">+229 00 00 00 00</a></div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:contact@peacefitness.bj">contact@peacefitness.bj</a></div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+            <div><div class="ci-label">Horaires d'ouverture</div><div class="ci-val">Lundi – Dimanche<br><strong style="color:var(--yellow)">6h00 – 22h00</strong> (sans interruption)</div></div>
+          </div>
+        </div>
+
+        <div class="contact-block reveal">
+          <h3 class="contact-block-title">Nous suivre</h3>
+          <div class="social-big-grid">
+            <a href="#" class="social-big-btn">
+              <span class="sbb-icon"><i class="fa-brands fa-instagram"></i></span>
+              <div><div class="sbb-name">Instagram</div><div class="sbb-handle">@peacefitnessbj</div></div>
+            </a>
+            <a href="#" class="social-big-btn">
+              <span class="sbb-icon"><i class="fa-brands fa-facebook"></i></span>
+              <div><div class="sbb-name">Facebook</div><div class="sbb-handle">Peace Fitness Cotonou</div></div>
+            </a>
+            <a href="https://wa.me/22900000000" class="social-big-btn wa" target="_blank">
+              <span class="sbb-icon"><i class="fa-brands fa-whatsapp"></i></span>
+              <div><div class="sbb-name">WhatsApp</div><div class="sbb-handle">+229 00 00 00 00</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="map-block reveal">
+          <div class="map-label"><i class="fa-solid fa-location-dot"></i> Atrokpocodji, Cotonou</div>
+          <div class="map-embed">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=2.35%2C6.33%2C2.45%2C6.42&layer=mapnik&marker=6.375%2C2.400"
+              allowfullscreen title="Localisation Peace Fitness"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="contact-form-wrap reveal">
+        <h3 class="contact-block-title">Envoyer un message</h3>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Prénom *</label>
+              <input type="text" id="fname" name="fname" placeholder="Jean-Paul" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Nom</label>
+              <input type="text" id="lname" name="lname" placeholder="Ahouansou">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Téléphone *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+229 00 00 00 00" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email (optionnel)</label>
+            <input type="email" id="email" name="email" placeholder="exemple@gmail.com">
+          </div>
+          <div class="form-group">
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet">
+              <option value="">Sélectionner un sujet...</option>
+              <option>Renseignement abonnement</option>
+              <option>Essai gratuit</option>
+              <option>Coaching personnalisé</option>
+              <option>Cours collectifs</option>
+              <option>Candidature coach</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="msg" rows="5" placeholder="Votre message..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-yellow form-submit">Envoyer le message</button>
+            <a href="https://wa.me/22900000000" class="btn btn-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp direct</a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/global.js"></script>
+</body>
+</html>

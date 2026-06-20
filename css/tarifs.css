@@ -1,0 +1,56 @@
+/* ═══════════════════════════════════════
+   TARIFS CSS
+═══════════════════════════════════════ */
+#tarifs-section { background: var(--black2); }
+.toggle-wrap { display: flex; justify-content: center; margin-bottom: 48px; }
+.toggle-pills { display: flex; background: var(--black3); border-radius: 30px; padding: 4px; gap: 4px; }
+.toggle-pill { padding: 10px 26px; border-radius: 26px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; cursor: pointer; transition: all var(--transition); color: var(--gray); background: transparent; }
+.toggle-pill.active { background: var(--yellow); color: var(--black); }
+
+.tarif-panel { display: none; grid-template-columns: repeat(3,1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
+.tarif-panel.active { display: grid; }
+
+.tarif-card { background: var(--black3); border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.07); padding: 44px 32px; position: relative; transition: transform var(--transition); }
+.tarif-card:hover { transform: translateY(-6px); }
+.tarif-card.featured { background: var(--yellow); border-color: var(--yellow); }
+.popular-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--black); color: var(--yellow); font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; white-space: nowrap; }
+.tarif-eco { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); background: var(--yellow-dim); border: 1px solid rgba(245,197,24,0.3); border-radius: 20px; display: inline-block; padding: 3px 12px; margin-bottom: 14px; }
+.tarif-eco.dark { color: var(--black); background: rgba(0,0,0,0.15); border-color: rgba(0,0,0,0.2); }
+.tarif-type { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); margin-bottom: 4px; }
+.tarif-card.featured .tarif-type { color: var(--black); opacity: 0.6; }
+.tarif-name { font-family: var(--font-title); font-size: 26px; color: var(--white); letter-spacing: 1px; margin-bottom: 4px; }
+.tarif-card.featured .tarif-name { color: var(--black); }
+.tarif-sub { font-size: 12px; color: var(--gray2); margin-bottom: 20px; }
+.tarif-card.featured .tarif-sub { color: rgba(0,0,0,0.5); }
+.tarif-price { font-family: var(--font-title); font-size: 54px; color: var(--yellow); line-height: 1; margin-bottom: 4px; }
+.tarif-card.featured .tarif-price { color: var(--black); }
+.tarif-unit { font-family: var(--font-body); font-size: 13px; color: var(--gray2); font-weight: 400; }
+.tarif-card.featured .tarif-unit { color: rgba(0,0,0,0.5); }
+.tarif-sep { height: 1px; background: rgba(255,255,255,0.08); margin: 20px 0; }
+.tarif-card.featured .tarif-sep { background: rgba(0,0,0,0.15); }
+.tarif-inc-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray2); margin-bottom: 14px; }
+.tarif-card.featured .tarif-inc-label { color: rgba(0,0,0,0.5); }
+.tarif-feats { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.tarif-feats li { font-size: 13px; color: var(--gray); display: flex; align-items: center; gap: 9px; }
+.tarif-feats li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--yellow); font-size: 12px; flex-shrink: 0; }
+.tarif-card.featured .tarif-feats li { color: var(--black); }
+.tarif-card.featured .tarif-feats li::before { color: var(--black); }
+.tarif-btn { display: block; text-align: center; }
+
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; max-width: 860px; margin: 0 auto; }
+.faq-item { background: var(--black4); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+.faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; background: none; color: var(--white); font-size: 14px; font-weight: 600; text-align: left; transition: color var(--transition); }
+.faq-q:hover { color: var(--yellow); }
+.faq-icon { font-size: 20px; color: var(--yellow); flex-shrink: 0; font-weight: 300; transition: transform var(--transition); }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; font-size: 13px; color: var(--gray); line-height: 1.7; font-weight: 300; padding: 0 24px; transition: max-height 0.35s ease, padding 0.35s ease; }
+.faq-item.open .faq-a { max-height: 200px; padding: 0 24px 20px; }
+
+@media (max-width: 960px) {
+  .tarif-panel.active { grid-template-columns: 1fr; max-width: 440px; }
+  .faq-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .toggle-pills { flex-direction: column; border-radius: var(--radius-lg); }
+}

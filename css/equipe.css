@@ -1,0 +1,23 @@
+/* ═══════════════════════════════════════
+   EQUIPE CSS
+═══════════════════════════════════════ */
+#equipe { background: var(--black2); }
+.equipe-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto; }
+.coach-card { background: var(--black3); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(255,255,255,0.06); display: grid; grid-template-columns: 280px 1fr; transition: transform var(--transition); }
+.coach-card:hover { transform: translateY(-4px); }
+.coach-img-wrap { position: relative; overflow: hidden; }
+.coach-img-wrap img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(30%); transition: filter 0.4s; }
+.coach-card:hover .coach-img-wrap img { filter: grayscale(0%); }
+.coach-social { position: absolute; bottom: 14px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; opacity: 0; transform: translateY(10px); transition: all 0.3s; }
+.coach-card:hover .coach-social { opacity: 1; transform: translateY(0); }
+.coach-social a { width: 34px; height: 34px; border-radius: var(--radius); background: rgba(245,197,24,0.9); display: flex; align-items: center; justify-content: center; font-size: 14px; transition: background var(--transition); }
+.coach-social a:hover { background: var(--yellow); }
+.coach-info { padding: 32px 28px; display: flex; flex-direction: column; justify-content: center; gap: 0; }
+.coach-name { font-family: var(--font-title); font-size: 28px; color: var(--white); letter-spacing: 1px; margin-bottom: 4px; }
+.coach-role { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); margin-bottom: 16px; }
+.coach-bio { font-size: 13px; color: var(--gray); line-height: 1.75; font-weight: 300; margin-bottom: 20px; }
+.coach-certs { display: flex; flex-wrap: wrap; gap: 8px; }
+.cert { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--yellow); background: var(--yellow-dim); border: 1px solid rgba(245,197,24,0.25); border-radius: 20px; padding: 4px 12px; }
+
+@media (max-width: 960px) { .equipe-grid { grid-template-columns: 1fr; } .coach-card { grid-template-columns: 1fr; } .coach-img-wrap { height: 300px; } }
+@media (max-width: 640px) { .equipe-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,176 @@
+/* ═══════════════════════════════════════
+   HOME PAGE CSS
+═══════════════════════════════════════ */
+
+/* ── HERO ── */
+#hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center;
+  padding: calc(var(--nav-h) + 20px) 5% 60px;
+  background: var(--black); overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1400&q=80') center/cover;
+  opacity: 0.18;
+}
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.88) 40%, rgba(0,0,0,0.3));
+}
+.hero-bg-letters {
+  position: absolute; left: 0; bottom: 8%;
+  font-family: var(--font-title); font-size: clamp(100px,18vw,240px);
+  color: rgba(245,197,24,0.05); letter-spacing: 10px;
+  pointer-events: none; line-height: 1; z-index: 1;
+}
+.hero-athlete {
+  position: absolute; right: 0; bottom: 0;
+  height: 92%; width: 48%;
+  object-fit: contain; object-position: bottom right;
+  filter: drop-shadow(0 0 60px rgba(245,197,24,0.10));
+  z-index: 1;
+}
+.hero-content { position: relative; z-index: 2; max-width: 600px; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(245,197,24,0.10); border: 1px solid rgba(245,197,24,0.3);
+  border-radius: 100px; padding: 6px 18px;
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--yellow); margin-bottom: 26px;
+}
+.hero-eyebrow::before {
+  content: ''; width: 6px; height: 6px;
+  background: var(--yellow); border-radius: 50%;
+  animation: blink 1.5s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+.hero-title {
+  font-family: var(--font-title); font-size: clamp(58px, 9.5vw, 118px);
+  line-height: .88; letter-spacing: 2px; color: var(--white); margin-bottom: 24px;
+}
+.hero-title span { color: var(--yellow); }
+.hero-sub {
+  font-size: 15px; color: var(--gray); line-height: 1.75;
+  max-width: 440px; margin-bottom: 38px; font-weight: 300;
+}
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ── STATS BAND ── */
+.stats-band {
+  background: var(--black3); border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: 0; padding: 40px 5%;
+}
+.stat-item { text-align: center; padding: 0 48px; }
+.stat-num {
+  font-family: var(--font-title); font-size: 52px; color: var(--yellow); line-height: 1;
+}
+.stat-label { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 6px; }
+.stat-sep { width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
+
+/* ── À PROPOS ── */
+#about-quick { background: var(--black2); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.about-img-wrap { position: relative; }
+.about-img { width: 100%; height: 480px; object-fit: cover; border-radius: var(--radius-lg); filter: grayscale(20%); }
+.about-badge {
+  position: absolute; bottom: -20px; right: -20px;
+  background: var(--yellow); border-radius: var(--radius-lg);
+  padding: 20px 26px; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.badge-num { display: block; font-family: var(--font-title); font-size: 42px; color: var(--black); line-height: 1; }
+.badge-txt { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(0,0,0,0.6); }
+.about-text { font-size: 14px; color: var(--gray); line-height: 1.8; margin-bottom: 16px; font-weight: 300; }
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; }
+.about-feat { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray); font-weight: 500; }
+.feat-icon { color: var(--yellow); font-weight: 700; font-size: 14px; }
+
+/* ── PROGRAMMES PREVIEW ── */
+.progs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+.prog-card {
+  background: var(--black4); padding: 36px 26px;
+  position: relative; overflow: hidden;
+  transition: background var(--transition);
+}
+.prog-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: var(--yellow);
+  transform: scaleX(0); transition: transform var(--transition); transform-origin: left;
+}
+.prog-card:hover { background: #333; }
+.prog-card:hover::after { transform: scaleX(1); }
+.prog-num {
+  position: absolute; top: 12px; right: 16px;
+  font-family: var(--font-title); font-size: 52px;
+  color: rgba(245,197,24,0.07); line-height: 1;
+}
+.prog-icon { font-size: 34px; margin-bottom: 16px; }
+.prog-name { font-family: var(--font-title); font-size: 22px; color: var(--white); letter-spacing: 1px; margin-bottom: 10px; }
+.prog-desc { font-size: 13px; color: var(--gray); line-height: 1.6; font-weight: 300; margin-bottom: 16px; }
+.prog-link { font-size: 12px; font-weight: 700; color: var(--yellow); letter-spacing: 1px; transition: letter-spacing var(--transition); }
+.prog-card:hover .prog-link { letter-spacing: 2px; }
+
+/* ── COMPTEURS ── */
+#compteurs {
+  background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1400&q=80') center/cover fixed;
+  position: relative; padding: 80px 5%;
+}
+#compteurs::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.78); }
+.compteurs-grid {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: repeat(4,1fr);
+  max-width: 960px; margin: 0 auto; text-align: center;
+}
+.compteur-item { padding: 36px 20px; border-right: 1px solid rgba(255,255,255,0.1); }
+.compteur-item:last-child { border-right: none; }
+.compteur-icon { font-size: 34px; margin-bottom: 12px; }
+.compteur-num { font-family: var(--font-title); font-size: 62px; color: var(--white); line-height: 1; margin-bottom: 8px; }
+.compteur-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); }
+
+/* ── TÉMOIGNAGES ── */
+.temos-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.temo-card { background: var(--black4); padding: 32px 28px; border-left: 3px solid var(--yellow); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+.temo-stars { color: var(--yellow); font-size: 14px; letter-spacing: 3px; margin-bottom: 14px; }
+.temo-text { font-size: 14px; color: var(--gray); line-height: 1.7; font-style: italic; font-weight: 300; margin-bottom: 20px; }
+.temo-author { display: flex; align-items: center; gap: 12px; }
+.temo-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; font-family: var(--font-title); font-size: 15px; color: var(--black); flex-shrink: 0; }
+.temo-name { font-size: 14px; font-weight: 700; color: var(--white); }
+.temo-info { font-size: 11px; color: var(--gray2); margin-top: 2px; }
+
+/* ── CTA BAND ── */
+#cta-band {
+  background: var(--yellow);
+  padding: 72px 5%; text-align: center;
+}
+.cta-title { font-family: var(--font-title); font-size: clamp(32px,5vw,58px); color: var(--black); letter-spacing: 1px; margin-bottom: 14px; }
+.cta-title span { color: var(--black); text-decoration: underline; text-underline-offset: 6px; }
+.cta-sub { font-size: 15px; color: rgba(0,0,0,0.65); margin-bottom: 32px; font-weight: 400; }
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.cta-btns .btn-yellow { background: var(--black); color: var(--yellow); border-color: var(--black); }
+.cta-btns .btn-yellow:hover { background: #111; }
+.cta-btns .btn-wa { background: var(--green); border-color: var(--green); color: var(--white); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .hero-athlete { width: 45%; opacity: 0.35; }
+  .about-grid   { grid-template-columns: 1fr; }
+  .about-badge  { right: 10px; }
+  .progs-grid   { grid-template-columns: repeat(2,1fr); }
+  .temos-grid   { grid-template-columns: 1fr; }
+  .compteurs-grid { grid-template-columns: repeat(2,1fr); }
+  .compteur-item:nth-child(2) { border-right: none; }
+}
+@media (max-width: 640px) {
+  .hero-athlete   { display: none; }
+  .hero-title     { font-size: 68px; }
+  .hero-btns      { flex-direction: column; }
+  .hero-btns .btn { text-align: center; }
+  .stats-band     { gap: 0; }
+  .stat-item      { padding: 20px 24px; }
+  .stat-sep       { width: 100%; height: 1px; }
+  .progs-grid     { grid-template-columns: 1fr; }
+  .about-features { grid-template-columns: 1fr; }
+  .cta-btns       { flex-direction: column; align-items: center; }
+}

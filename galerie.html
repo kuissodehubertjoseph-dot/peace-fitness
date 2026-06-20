@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie — Peace Fitness</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/galerie.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="page-header">
+    <div class="page-header-bg-text">GALERIE</div>
+    <div class="page-header-content">
+      <div class="page-header-eyebrow">Nos installations</div>
+      <h1>GALERIE <span>PHOTOS</span></h1>
+      <p>Découvrez nos espaces modernes, nos équipements professionnels et l'ambiance Peace Fitness.</p>
+      <div class="breadcrumb"><a href="index.html">Accueil</a><span class="breadcrumb-sep">›</span><span>Galerie</span></div>
+    </div>
+  </div>
+
+  <section id="galerie">
+    <div class="galerie-filters reveal">
+      <button class="gal-filter active" data-cat="all">Tout voir</button>
+      <button class="gal-filter" data-cat="salle">La salle</button>
+      <button class="gal-filter" data-cat="equip">Équipements</button>
+      <button class="gal-filter" data-cat="cours">Cours</button>
+    </div>
+    <div class="galerie-masonry reveal">
+      <div class="gal-item tall" data-cat="salle">
+        <img src="images/galerie-1.jpg" alt="Salle moderne">
+        <div class="gal-overlay"><span>Espace Cardio</span></div>
+      </div>
+      <div class="gal-item" data-cat="cours">
+        <img src="images/galerie-2.jpg" alt="Entraînement haltères">
+        <div class="gal-overlay"><span>Zone Musculation</span></div>
+      </div>
+      <div class="gal-item" data-cat="cours">
+        <img src="images/galerie-3.jpg" alt="Membre Peace Fitness">
+        <div class="gal-overlay"><span>Nos Membres</span></div>
+      </div>
+      <div class="gal-item tall" data-cat="cours">
+        <img src="images/galerie-4.jpg" alt="Selfie salle">
+        <div class="gal-overlay"><span>Ambiance Salle</span></div>
+      </div>
+      <div class="gal-item" data-cat="equip">
+        <img src="images/galerie-5.jpg" alt="Entraînement banc">
+        <div class="gal-overlay"><span>Équipements Pro</span></div>
+      </div>
+      <div class="gal-item" data-cat="cours">
+        <img src="images/galerie-6.jpg" alt="Entraînement femme">
+        <div class="gal-overlay"><span>Force & Détermination</span></div>
+      </div>
+      <div class="gal-item" data-cat="cours">
+        <img src="images/galerie-7.jpg" alt="Squat femme">
+        <div class="gal-overlay"><span>Entraînement Jambes</span></div>
+      </div>
+      <div class="gal-item tall" data-cat="salle">
+        <img src="images/galerie-8.jpg" alt="Vue d'ensemble salle">
+        <div class="gal-overlay"><span>Vue d'ensemble</span></div>
+      </div>
+      <div class="gal-item" data-cat="salle">
+        <img src="images/galerie-9.jpg" alt="Salle en action">
+        <div class="gal-overlay"><span>Salle en Action</span></div>
+      </div>
+      <div class="gal-item" data-cat="equip">
+        <img src="images/galerie-10.jpg" alt="Zone fonctionnelle">
+        <div class="gal-overlay"><span>Zone Fonctionnelle</span></div>
+      </div>
+      <div class="gal-item" data-cat="cours">
+        <img src="images/galerie-11.jpg" alt="Coaching personnalisé">
+        <div class="gal-overlay"><span>Coaching Personnalisé</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/global.js"></script>
+  <script>
+    document.querySelectorAll('.gal-filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.gal-filter').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.cat;
+        document.querySelectorAll('.gal-item').forEach(item => {
+          item.style.opacity = (cat === 'all' || item.dataset.cat === cat) ? '1' : '0.2';
+          item.style.transform = (cat === 'all' || item.dataset.cat === cat) ? 'scale(1)' : 'scale(0.97)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
