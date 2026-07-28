@@ -17,7 +17,7 @@ const NAV_HTML = `
     <li><a href="galerie.html">Galerie</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="https://wa.me/22900000000" class="nav-cta" target="_blank">Essai Gratuit</a>
+  <a href="https://wa.me/22901909030" class="nav-cta" target="_blank">Essai Gratuit</a>
   <button class="burger" id="burger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -29,7 +29,7 @@ const NAV_HTML = `
   <a href="tarifs.html">Tarifs</a>
   <a href="galerie.html">Galerie</a>
   <a href="contact.html">Contact</a>
-  <a href="https://wa.me/22900000000" class="mob-cta" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  <a href="https://wa.me/22901909030" class="mob-cta" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
 </div>`;
 
 const FOOTER_HTML = `
@@ -41,7 +41,7 @@ const FOOTER_HTML = `
       <div class="footer-social">
         <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
         <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://wa.me/22900000000" title="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://wa.me/22901909030" title="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
     <div>
@@ -74,7 +74,7 @@ const FOOTER_HTML = `
       </div>
       <div class="footer-contact-item">
         <span class="icon"><i class="fa-solid fa-phone"></i></span>
-        <span>+229 00 00 00 00</span>
+        <span>+229 01 90 90 30 30</span>
       </div>
       <div class="footer-contact-item">
         <span class="icon"><i class="fa-solid fa-clock"></i></span>

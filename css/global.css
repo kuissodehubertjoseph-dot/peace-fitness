@@ -89,7 +89,7 @@ button { cursor: pointer; font-family: var(--font-body); border: none; }
 .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .mobile-menu {
-  display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+  position: fixed; top: var(--nav-h); left: 0; right: 0;
   background: var(--black); z-index: 299;
   border-bottom: 2px solid var(--yellow);
   padding: 0 5%;

@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const text = encodeURIComponent(
         `Bonjour Peace Fitness ! Je suis ${fname}, mon numéro : ${phone}.${msg ? ' Message : ' + msg : ''}`
       );
-      window.open(`https://wa.me/22900000000?text=${text}`, '_blank');
+      window.open(`https://wa.me/22901909030?text=${text}`, '_blank');
       showToast('✅ <strong>Message envoyé !</strong> On vous répond très vite.');
       form.reset();
     });
